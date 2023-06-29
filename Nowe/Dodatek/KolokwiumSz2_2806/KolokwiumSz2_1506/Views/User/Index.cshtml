@@ -1,0 +1,47 @@
+﻿@using SzkolenieKolokwium.storage.DTO;
+@model IEnumerable<AppDTO>
+@{
+    ViewData["Title"] = "Users";
+}
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead class="tab-pane">
+            <tr>
+                <th>Imię</th>
+                <th>Nazwisko</th>
+                <th>Email</th>
+                <th>Nazwa konkursu</th>
+                <th>
+                    <a class="btn btn-outline-primary" asp-action="Add">Dodaj Uczestnika</a>
+                    <a class="btn btn-outline-primary" asp-action="AddKonkurs">Dodaj Konkurs</a>
+                </th>
+            </tr>
+        </thead>
+        <tbody class="tab-content">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Imie</td>
+                    <td>@item.Nazwisko</td>
+                    <td>@item.Email</td>
+                    <td>@item.KonkursName</td>
+                    <td>
+                        <form method="post" asp-action="Delete" asp-route-id="@item.Id">
+                            <button type="submit" class=" btn btn-link text-danger float-right">Usuń</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Brak danych</p>
+    <p>
+        <a class="btn btn-outline-primary" asp-action="Add">Dodaj Uczestnika</a>
+        <a class="btn btn-outline-primary" asp-action="AddKonkurs">Dodaj Konkurs</a>
+    </p>
+}

@@ -1,0 +1,5 @@
+D:\ST2\DoKol\Dodatek\Aplikacja\storage\obj\Debug\net5.0\storage.csproj.AssemblyReference.cache
+D:\ST2\DoKol\Dodatek\Aplikacja\storage\obj\Debug\net5.0\storage.GeneratedMSBuildEditorConfig.editorconfig
+D:\ST2\DoKol\Dodatek\Aplikacja\storage\obj\Debug\net5.0\storage.AssemblyInfoInputs.cache
+D:\ST2\DoKol\Dodatek\Aplikacja\storage\obj\Debug\net5.0\storage.AssemblyInfo.cs
+D:\ST2\DoKol\Dodatek\Aplikacja\storage\obj\Debug\net5.0\storage.csproj.CoreCompileInputs.cache

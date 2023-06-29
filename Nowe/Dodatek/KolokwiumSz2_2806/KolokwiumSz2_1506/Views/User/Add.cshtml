@@ -1,0 +1,31 @@
+﻿
+@model UserAddModel
+@{
+    ViewData["Title"] = "Users";
+}
+
+<h2>Dodaj uczestnika</h2>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Imie"> Imie</label>
+        <input asp-for="Imie" type="text" class="form-control" />
+        <span asp-validation-for="Imie" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Nazwisko"> Nazwisko</label>
+        <input asp-for="Nazwisko" type="text" class="form-control" />
+        <span asp-validation-for="Nazwisko" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email"> E-mail</label>
+        <input asp-for="Email" type="text" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <select asp-for="KonkursId" asp-items="Model.Konkursy" class="form-control">
+            <option value="">Wybierz Konkurs</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-outline-primary float-right">Zapisz</button>
+</form>
